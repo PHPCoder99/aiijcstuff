@@ -11,7 +11,7 @@ else:
             isPrime = False
 
 
-for i in range(2, 9):
+for i in range(2, 10):
     while A % i == 0:
         B += str(i)
         A //= i
