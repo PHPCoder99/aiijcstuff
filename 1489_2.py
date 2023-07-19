@@ -5,7 +5,7 @@ def find_unique_number(A):
     digits_B = []
     for factor in range(9, 1, -1):
         while A % factor == 0:
-            digits_B.append(factor)
+            digits_B.append(str(factor))
             A //= factor
 
     if A != 1:
@@ -13,7 +13,7 @@ def find_unique_number(A):
         return
 
     digits_B.sort()
-    B = int(''.join(map(str, digits_B)))
+    B = "".join(sorted(list(digits_B)))
     print(B)
 
 find_unique_number(int(input()))
